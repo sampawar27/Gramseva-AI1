@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:8080/api";
+const BASE_URL = import.meta.env.VITE_API_URL || "https://gramseva-ai-backend-sax7.onrender.com";
+const API_URL = `${BASE_URL}/api`;
 
 export async function loginOfficer(officerId, password) {
     const response = await fetch(`${API_URL}/auth/officer/login`, {
